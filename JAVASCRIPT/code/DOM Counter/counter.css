@@ -1,0 +1,41 @@
+body
+{
+   background-color: rgb(126, 174, 176);
+}
+h1{
+    text-align: center;
+    padding-top: 15%;
+    text-shadow: 2px 3px 3px wheat;
+}
+main
+{
+  background-color:rgb(130, 154, 154);
+  text-align: center;
+  padding: 50px;
+  margin: 15vh 35vw;
+  border-radius: 0.3em;
+  font-size: 30px;
+  margin-top: 0px;
+  padding-top: 0%;
+}
+button
+{
+    height: 2em;
+    width: 3em;
+    border-radius: 10px;
+    font-size: 17px;
+    background-color:darkgray;
+
+}
+#b3
+{
+    width: 5em;
+}
+.final
+{
+    background-color:rgb(134, 113, 154);
+    border-top-right-radius: 0.3em;
+    width: 3em;
+    margin-left: 87%;
+    
+}

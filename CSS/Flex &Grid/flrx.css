@@ -1,0 +1,34 @@
+.parent
+{
+  border: 1px solid black;
+  box-sizing:border-box;
+  height:200px;
+  display: flex;
+  flex-wrap:wrap ; /* we can wrap,nowrap the content */
+  flex-flow:row; /* we can change it as column also */
+  flex-direction:row-reverse; /* it reverse the order*/
+  justify-content:space-evenly;/*Used for cross content*/
+  justify-items: center;/*Used for cross and inline axis*/
+  align-items: center;/*Used for inline and main axis*/
+  align-content: center;/*/*Used for main axis*/
+}
+.child
+{
+    border: 1px solid black;
+    background-color: aqua;
+    height:50px;
+    width:50px;
+}
+.child1
+{
+    flex-grow: 2;/* it will increase the size of the child than the others*/
+}
+.child2
+{
+    flex-basis: 200px; /* it will have basics size of the child than the others*/
+    align-self:flex-start; /* align it is used for alignment for individual elements */
+}
+.child3
+{
+    flex-shrink: 2;/* it will decrease the size of the child than the others*/
+}

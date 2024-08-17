@@ -1,0 +1,20 @@
+section
+{
+    display: flex;  
+    justify-content:space-evenly;
+    font-size: 40px ;
+
+}
+div
+{
+    border: 1px solid black;
+    padding: 100px;
+    margin-top: 100px;
+}
+#b
+{
+    color:coral;
+}
+button{
+    font-weight: bolder;
+}

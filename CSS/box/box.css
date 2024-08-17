@@ -1,0 +1,119 @@
+.box
+{
+    background-image:url(https://images.unsplash.com/photo-1581068466660-e6585b8afa97?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGJveHxlbnwwfHwwfHx8MA%3D%3D);
+    background-size:cover;
+    border: 3px solid black;
+    height:200px;
+    width: 200px;
+    padding:30px;
+    margin: 5px;
+    border-radius: 200px;
+    box-sizing: border-box;
+}
+#p1
+{
+    color:darkturquoise;
+    text-align:center;
+
+}
+.child,.stu,.student,.student1,.student2
+{
+    border: 2px solid black;
+    height: 20vh;/*View-port height*/
+    width: 20vw;/*View-port width*/
+    box-sizing: border-box;
+    margin: 0px 10px;
+    padding: 20px;
+    background-color: cadetblue;
+
+}
+#a
+{
+    border: 1px solid black;
+}
+#a .child
+{
+    display:inline-block;
+}
+#float 
+{
+    float: left;
+    border: 1px solid black;
+}
+#float .child
+{
+    display:inline-block;
+}
+#parent
+{
+    float: left;
+    border: 1px solid black;
+}
+.student1
+{
+    position:absolute;
+    z-index:10000 ;/* it shows which element on top bythe highest value*/
+}
+.student2
+{
+    position:fixed ;/* it remains in same position but the next element will be under the absolute element*/
+    z-index:3000 ;    
+    top:450px;
+}
+.student
+{
+    top:450px;
+    position: relative;
+}
+div header
+{
+    background-color: gray;
+    text-align:center;
+}
+div header img
+{
+    height: 200px;
+    width: 300px;
+    position:fixed;
+    top: 50px;
+    text-align: center;
+}
+.section
+{
+    width: 100vw;
+    height: 30vh;
+}
+#section1
+{
+    background-color:yellow;
+}
+#section2
+{
+    background-color:blue;
+    position: absolute;
+    z-index: 500;
+}
+#section3
+{
+    background-color:green;
+    position: fixed;
+}
+#section4
+{
+    background-color:orange;
+    width: 100vw;
+    height: 50vh;
+}
+#section5
+{
+    background-color: purple;
+    
+}
+div+a:link
+{
+  background-color:rgb(240, 170, 205);
+}
+a:active
+{
+    color: darkorchid;
+}

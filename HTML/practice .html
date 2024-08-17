@@ -1,0 +1,91 @@
+<!--Tasks:
+    SEO = Search Engine Optimization
+    1.Inside the body, place a comment that" it is my pratice code
+    2.Main heading with content "Pratice page"
+    3.Write one para with content " I want to pratice HTML" where HTML has to be in bold.
+    4.Add an image with source "link" and give an alternate "image"
+    5.To make sure your image fits well height and width
+    6.Make ur img clickable and it leads to page "google.com"
+    7. Make a para with "title of the img is cute dog " where cute dog also clickable and leads to google.
+    8.make a list of items that dog link preference. Title is "My Dog likes :" and items my dog likes are "pedigree,playing and ball"
+    9. I also wants list of events happened  with my Dog.like
+       2010-he was born
+       2011-he grown so well
+       2012-he won some prizes
+    10.Create a table as shown below 
+    11. Use the sematic tag header to keep the main title  
+    12.wrap up remaining code in main element and footer elemnt
+    13. insert a para element in footer as "This Website is Copyrighted 2023"
+    14. Divide header, main, footer by horizontal line
+-->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pratice</title>
+        <style>
+            table,th,tr,td
+            {
+                border: 1px solid black
+            }
+        </style>
+    </head>
+    <body >
+        <!--It is my pratice code-->
+        <header>
+            <h1>Pratice Page</h1>
+        </header>
+        <hr>
+        <main>
+            <p>I want to pratice <strong>HTML</strong></p>
+            <a href="https://www.google.com" target="_blank"><img src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?cs=srgb&dl=adorable-animal-breed-1108099.jpg&fm=jpg" alt="image"
+                height="200" width="200"></a>
+            <p>THe title of the img is <a href="https://www.google.com">CUTE DOG</a></p>
+            <h2>My Dog likes:</h2>
+             <ol type="I" reversed>
+                <li>Pedigree</li>
+                <li>Playing</li>
+                <li>ball</li>
+             </ol>
+             <h2>EVENTS</h2>
+             <dl>
+                <dt>2010</dt>
+                <dd>He was born</dd>
+                <dt>2011</dt>
+                <dd>he grown so well</dd>
+                <dt>2012</dt>
+                <dd>HE won some prices</dd>
+             </dl>
+             <table style="background-color: aqua; color: brown;" >
+                <caption>TABLE</caption>
+                <tr>
+                    <th>no.</th>
+                    <th>Award</th>
+                    <th>Year</th>
+                    <th>Status</th>
+                </tr>
+                <tr>
+                    <td colspan="3">Nothing</td>
+                    <td>Nothing</td>
+                </tr>
+                <tr>
+                    <td>i</td>
+                    <td>runner</td>
+                    <td>2012</td>
+                    <td rowspan="2">Broken</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>walker</td>
+                    <td>2013</td>
+                </tr>
+             </table>
+        </main>
+        <hr>
+        <footer>
+            <p>This Website is &copy;Copyrighted 2023</p>
+            <p>Lorem ipsum <span>dolor sit amet</span> consectetur adipisicing elit. Exercitationem aut obcaecati possimus delectus quisquam vitae, laborum maxime laudantium esse minus? Ipsa quae, officiis a rem minus officia ut? Reprehenderit, modi?</p>
+        </footer>
+    </body>
+    </html>

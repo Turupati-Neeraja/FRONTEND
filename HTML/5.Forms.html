@@ -1,0 +1,134 @@
+<!-- FORMS:
+    it is used to take the data from user Input.
+    INPUT=>In forms every element will be binded with input.All elements are wrapped within form element(<form>&<form>tag)
+    form element will have action (url to where the submitted data to be transfer and method is how you transfer the form data(get/post))
+  INPUT ATTRIBUTES:
+       name: name specifies the name of input data when it gets transfered
+       value: value defines pre written text for the input
+       we can also mention attributes like id,class etc..,
+       labels: uses for attribute to select specified input using id-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="shortcut icon" href="https://assets-global.website-files.com/5ebb0930dd82631397ddca92/61b8ef1d67e7415b7dc59371_product-template-forms-government.png" type="image/x-icon">
+   <link rel="stylesheet" href="./demo.css">
+</head>
+<body>
+    <h1>FORMS</h1>
+            <!-- <form action="server.js" method="get/post">
+            GET = it will display the information
+            POST = it will hide the information like passwords</form> -->
+    <form action="server.js">
+    <fieldset>
+        <legend align="center"><strong>MY DATA</u></strong></legend><br>
+        <div>
+            <label for="1">Enter your First name:*</label>
+            <input type="text" id="1" placeholder="first name" name="First_name"><br><br>
+        </div>
+        <div>
+            <label for="2">Enter your Last name:</label>
+            <input type="text" id="2" placeholder="Last name" name="last_name" ><br><br>
+        </div>
+        <div>
+            <label for="3">email /Phone no.:*</label>
+            <input type="email" id="3" placeholder="email or phone no."><br><br>
+        </div>
+        <div>
+            <label for="4">Password:</label>
+            <input type="password" id="4" placeholder="password" minlength="5" maxlength="15"><br><br>
+            <!--password: pattern="/[A-Z a-z]{4}[0-9]{4}/"-->
+        </div>
+        <div>
+            <label for="5">Date of birth:</label>
+            <input type="date"><br><br>
+        </div>
+        <div>
+        <!--RADIO ELEMENTS: IT USED TO SELECT ONLY ONE CONDITION-->
+            <label for="G">Enter your gender:</label>
+            <input type="radio" name="G" value="Men">
+            <label for="G">Men</label>
+            <input type="radio" name="G" value="Female">
+            <label for="G">Female</label>
+            <input type="radio" name="G" value="Not speified">
+            <label for="G">Not speified</label><br><br>
+        </div>
+        <!--CHECK BOX:IT USED TO SELECT MORE THAN ONE CONDITION-->
+            <label for="l">Programming Language:</label>
+            <input type="checkbox" name="l">
+            <label for="">Java</label>
+            <input type="checkbox" name="l">
+            <label for="">JavaScript</label>
+            <input type="checkbox" name="l">
+            <label for="">Python</label><br><br>
+        <section>
+            <div>
+            <label for="flower">Choose your favourite flower:</label>
+            <select name="Flower" id="" ><!--select name="Flower" id="" multiple size="2"-->
+                <option value="">--please choose an option--</option>
+                <option value="Rose">Rose</option>
+                <option value="Lotus">Lotus</option>
+                <option value="Jasmine">Jasmine</option>
+                <option value="Lilly">Lilly</option>
+                <option value="Sunflower">Sunflower</option>
+                <option value="Marigold">Marigold</option>
+            </select>   
+        </div><br>
+        <div>
+            <data-lists>
+                <label for="fruits">Choose your favourite fruits:</label>
+                <select name="fruits" id="">
+                    <option value="">--please choose an option--</option>
+                    <option value="Mango">Mango</option>
+                    <option value="apple">apple</option>
+                    <option value="banana">banana</option>
+                    <option value="orange">orange</option>
+                    <option value="grapes">grapes</option>
+                </select>
+            </data-lists>
+        </div><br>
+        <div>
+            <label for="food"> Select your Favourite food:</label>
+            <select name="food" id="">
+                <option value="">--please choose an option--</option>
+                <optgroup label="chocolates">
+                <option value="Dairy Milk">Dairy Milk</option>
+                <option value="Dark choco">Dark choco</option>
+                <option value="Bubbly">Bubbly</option>
+                </optgroup>
+                <optgroup label="Deserts">
+                    <option value="Cakes">Cakes</option>
+                    <option value="Sweets">Sweets</option>
+                    <option value="Cookies">Cookies</option>
+                    <option value="Cupcakes">Cupcakes</option>
+                </optgroup>
+                <optgroup label="Beverages">
+                    <option value="Mocktails">Mocktails</option>
+                    <option value="Smoothies">Smoothies</option>
+                    <option value="Shakes">Shakes</option>
+                </optgroup>
+                <option value="">Others</option>   
+            </select>
+        </div><br>
+        <label for="pdf">Upload your resume (pdf only):</label>
+         <input type="file" name="pdf" accept=".pdf, word and docs only"required><br><br>
+        <label for="image">upload your image:</label>
+         <input type="file" name="image" accept="image/*" required>
+    </section>
+    <footer>
+        <button class="para" >Submit</button>
+        <!--  BY USING INPUT METHOD WE CAN ALSO CREATE BUTTON FOR SUBMISSION:
+            <input type="submit" value="hvmmmjl">
+            <input type="button" value="jhkjvj"> //its just a button//--->
+        <input id="p1" type="reset"> 
+        <input type="">   
+    </footer>
+    </form>
+    </fieldset>
+    <!--iframe:
+        -->
+</body>
+</html>

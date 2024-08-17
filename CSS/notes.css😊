@@ -1,0 +1,28 @@
+Box -Model : It contains Padding +border+margin
+padding: Space between content and border => padding: 60px/* top.left.right.bottom=60px*/
+         or padding-top/padding-right/padding-bottom/padding-left or padding:tb lr or t r l b
+Border:ectreme end of the Box border:width type color 
+margin: Space between two boxes/space contained by the box outside the border
+Box- Sizing : bydefault you have content box
+             by making it "border box" padding, border will be included in the box height and width 
+Display: none will remove from the DOM, 
+Visability : none will just hide in the UI 
+display: block/inline will make element as block or inline but inline elements cannot have height/width. 
+         To solve that you can give display: inline-block
+float : left/right will move the element to right/left side of the page, but it removed from the normal flow of page. to clear it sides we use 'clear' property
+Units: 
+ px - pixels your screen having*height some pixels
+ %  - you can use % also for difference percentages of parent.
+ em - Emphasized text, it measures based on root element 1 rem is 16px
+ vh and vw -Veiw-port height and view-port width which works like percentage of view-port( what visible on screen)              
+
+Positions:
+      Positionn define where you want to place the item in UI.
+      ==THERE ARE 5 POSITION TYPES:==
+         1.DEFAULT STATIC: It will not have any impact with the top, left,right, bottom
+         2. ABSOLUTE:==position:absolute==It will make element adjusts top,left,right,bottom with respect to root element (body).
+         3. RELATIVE: position relative will make element adjusts top ,left, right, bottom with respect to parent.
+         4. FIXED: The postion will be fixed it doesnt move . fixed will work with body like absolute but scrolloing 
+         will not have any impact on fixed.
+         5. STICKY: sticky will also work like fixed but relative to parent and scrolloing will not having any effect after it reaches particular value.
+Z- INDEX: it is used to overlay on another element. th element with more z-index will win.

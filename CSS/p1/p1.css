@@ -1,0 +1,129 @@
+External < Internal < Inline < Class < id 
+Selecting elements with that tag name
+MORE SELECTORS
+PSUDO ELEMENTS AND CLASSES
+
+/*External Styling*/
+<style>
+p /* tag name*/
+{
+    background-color: blueviolet; color:chartreuse;
+}
+/*class is defined by .*/
+.para/* class name*/
+{
+    background-color: darkcyan; color:black
+}
+#p12/* id*/
+{
+    background-color: chartreuse; color: blueviolet;
+}
+h1
+{
+  color:brown;
+  font-style: italic;
+  font-size:40px;
+  font-family: 'Cedarville Cursive', cursive;
+  font-weight: bolder;
+  text-align: center;
+  text-decoration: underline;
+}
+/*selecting by id, it applies to element with that id */
+#name
+{
+    border: 2px black; /*border: 2px solid black*/
+    border-style: dotted;
+}
+</style>
+body
+{
+    border: solid black;
+}
+/* MORE SELECTORS: */
+/* DESCENDANT */
+#name p
+{
+    font-size : 24px
+}
+/* CHILD */
+#name >p
+{
+    text-align: center;
+}
+/* SIBBLING*/
+/* in body after complete div tag the sibbling */
+div+p
+{
+    color: brown;
+    font-size: 20px;
+}
+/* GRAND CHLID */  
+/*in div wherever p is there it is consider */
+div p
+{
+    font-style: italic;
+}
+/* it can be any where */
+div~p
+{
+    text-align: right;
+}
+
+/* PSEUDO ELEMENTS AND PSEUDO CLASSES */
+
+/*PSEUDO ELEMENTS : */
+.para::first-line 
+{
+    color: rgb(150, 177, 122);
+}
+.para::first-letter
+{
+    font-size: large;
+}
+.para::after
+{
+    content: "WELCOME";
+}
+/* PSEUDO CLASSES */
+div+a:active
+{
+   background-color: chartreuse;
+}
+div~a:link
+{
+  color:blue;
+}
+div+a:visited
+{
+    color:aquamarine;
+}
+input[type="text"]
+{
+    background-color: cornflowerblue;
+}
+input::placeholder
+{
+    color:chocolate;
+}
+#main
+{
+    height: 200px;
+    width: 100px;
+    border: 1px solid black;
+}
+.child
+{
+    height: 50px;
+    width: 50px;
+    border: 1px  dotted rgb(218, 182, 117);
+}
+.child:nth-child(even)/*(1),(2),(3),(4)*/
+{
+    background-color: cadetblue;
+}
+.child:nth-of-type(3)
+{
+    background-color: aqua;
+}
+
+

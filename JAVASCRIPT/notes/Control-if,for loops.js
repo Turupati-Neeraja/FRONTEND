@@ -1,3 +1,6 @@
+/* if---else---elseif--switch Case---loops---for---while---dowhile--//
+
+
 //------------------------CONTROL STATEMENTS------------------------//
 //if : checks whether the condition is true//
 //else:  checks  the condition is it is true it prints the statement and ends . If it is false it cheks the else condition.

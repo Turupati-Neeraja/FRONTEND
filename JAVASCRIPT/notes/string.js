@@ -1,3 +1,5 @@
+//---------------------------------STRINGS-------------------------//
+
 str="My name is Neeraja Turupati"
 str.split(' ')[0].split(' ')
 //['My']

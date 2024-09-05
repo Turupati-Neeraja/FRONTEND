@@ -1,4 +1,4 @@
-//------------------VAR, LET, CONSTANT ------------------------//
+//------------------VAR, LET, CONSTANT, EXECUTION CONTENT ------------------------//
 
 //Global Execution Content or window or js can use a value before its initialization. this is called Hoisting
 /* var is used in olden times till Es2015/Es6, then we started using let or const */

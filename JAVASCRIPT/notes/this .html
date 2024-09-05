@@ -1,0 +1,79 @@
+<!--THIS---WINDOW()---call,apply,bind---REST, spare functions----//
+
+// SCOPE OF LOCAL VALUES ARE CALLED LOCAL SCOPING
+//SCOPE OF GLOBAL VALUES ARE GLOBAL SCOPING
+//SCOPE OF THIS VALUES ARE CALLED LEXICAL SCOPING
+==this -> current calling object */ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THIS</title>
+</head>
+<body>
+    <button id="btn">click me</button>
+    <script>
+        //scope-range
+        name="prasad"//global value-scope
+        // function display()
+        // {   console.log(this)        //WINDOW FUNCTION 
+        //     name="vani" //local
+        //     console.log(name)      //vani
+        //     function display2()
+        //     {
+        //       a=2
+        //     }
+        //     display2()
+        //     console.log(a)    //2
+        // }
+        // window.display()
+        let obj={
+            name:"neeru",
+            email:"a@a.com",
+            age:25,
+           mine:()=>console.log(this)
+        }
+        obj.mine()
+        function printt(a,b)
+        {
+            console.log(this)       //whole obj {name:"neeru", email:"a@a.com", age:25, mine:()=>console.log(this)}
+            console.log(this.name,a,b)   //neeru 2 3
+        }
+        const printt2=(a,b)=>{
+            console.log(this)              //window fun
+            console.log(this.name, a, b)   //prasad 2 3
+        }
+        printt2.call(obj, 2, 3)
+
+//----------------------------call,apply,bind----------------------//
+       // call,apply,bind
+       printt.call(obj,2,3)           //neeru 2 3 //it will tells the fun that obj is called you it can take the value
+       printt.apply(obj,[2,3])        //neeru 2 3 //it will tells the fun that obj is called you it can take the value in the form of array
+       let x= printt.bind(obj,2,3)  
+       x()                          //neeru 2 3
+       x()                         //neeru 2 3
+     
+    //this means current calling object
+    document.getElementById('btn').addEventListener('click',display)
+    function display()
+    {
+    console.log(this)      //window fun
+    }
+    display()
+
+    //------------------REST, spare functions---------------------// 
+    //rest of parameters denoted by ...
+    function add(a,b,e,f,...c){       //2,3,5,6,[8,7,9,1,4,0]
+    const arr=[a,...c,b]              //2,[8,7,9,1,4,0],3
+    const arr2=[...c,5,6]             // [8,7,9,1,4,0],5,6
+    console.log(...c)                 //  [8,7,9,1,4,0]
+    console.log(arr)                  // [2,8,7,9,1,4,0,3]
+    console.log(a+b)                  // 5
+    console.log(c.length)             // 6
+    }
+    add(2,3,5,6,8,7,9,1,4,0)
+    </script>
+</body>
+</html>

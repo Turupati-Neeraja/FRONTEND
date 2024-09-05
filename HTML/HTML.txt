@@ -1,0 +1,7 @@
+HTML:
+-Html is a presentation language.
+-Hyper text MArkup Language.
+- Term Hyper is derived from Greek Term, which means "Beyond".
+-Hyper Text is th etext that comprises of content Beyond what you see.
+-Markup means marking up our information for presentation.
+-Html comprises of elemennts arranges in a hierarchy called DOM ( Documnet Object Model ).

@@ -1,5 +1,21 @@
 //-----------------------DOM- DOCUMENT OBJECT MODEL--------------------//
-//DOM uses to manipulate the whole code like inserting, updating, deleting and creating.//
+/* WHAT IS DOM?
+-DOM uses to manipulate the whole code like inserting, updating, deleting and creating.
+-DOM is a programming API for HTML and XML documents.
+-It defines the logical structure of documnets.
+- Itspecifies a way for accessing and manipulating HTML and XML document.
+-HTML presents all its elements in a hierarchy called DOM.
+-With Dom programmers can create and built documnets, navigate their structure, and addd, modify or delete elements and content.
+-HTML presents Dom and JAvaScript Manipulates DOm.
+-Html Dom is Static and Javascrip males the static Dom into Dynamic Dom.
+
+===WHAT IS BOM ( BROWSER OBJECT MODEL ) ?
+- It represents the browser model.
+-It defines a set of objects that are use dto manipulate the browser.
+-Programmers uses BOM to handle interaction with regard to browser.
+-Programmer can know about browser and its capabilities by using BOM.
+
+
 
 //---------------------HTML EXAMPLE CODE TO MAKE CHANGES--------------//
 /*<body>
@@ -75,4 +91,5 @@ onclick - The user clicks an HTML element.
 onmouseover - user moves the mouse over an HTMl element.
 onmouseout - user moves the mouse away an HTMl element.
 onkeydown - user pushes a keyboard key.
-onload - The browser has finished loading the page. */
+onload - The browser has finished loading the page. 
+

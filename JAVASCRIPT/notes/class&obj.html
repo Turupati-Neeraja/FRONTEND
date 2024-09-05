@@ -1,0 +1,82 @@
+<!---OOPS---GETTERS AND SETTERS---parent class--SUPER CLASS---child class--SUB CLASS//
+-- ------------------------------OOPS-------------------------------
+OOPS-OBJECT ORIENTED PROGRAMMING
+-CLASSES & OBJECTS
+-ABSTRACTION
+-ENCAPSULATION : wrapping the dat methods in classes-security
+-INHERITANCE : Aquring properties from parent to child
+-POLYMORPHISM :  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLASS & OBJECTS</title>
+</head>
+<body>
+    <h1>CLASS & OBJECTS</h1>
+
+    <script>
+        class student              //parent class--SUPER CLASS
+        {
+            rno=0;
+            name=" " ;
+            marks=0;
+            constructor(rno,name,marks)
+            {
+                this.rno=rno;
+                this.name=name;
+                this.marks=marks;
+            }
+            result()
+            {
+                let mark=this.marks
+                if(mark<=35)
+                    console.log( this.name +" is Fail")
+                else
+                    console.log( this.name + " is Pass")
+            }
+            display()
+            {
+                console.log("My name is "+this.name, "and rno. is "+this.rno, ",I got marks in my graduation is " +this.marks )
+            }
+            //-------------------GETTERS AND SETTERS-------------------//
+            get nam()
+            {
+                //return "bye bye"
+                // return this.name   //return teja
+                return this.marks
+            }
+            set mar(v)
+            {
+                this.marks=v;
+            }
+        }
+        class monitors extends student      //child class--SUB CLASS
+        {
+            priority;
+            constructor(r,n,m,pr) 
+            {
+                super(r,n,m)
+                this.priority=pr
+            }
+        }
+        let obj=new monitors(944,"sudha",66,7)     // it calls by using child class
+        // let obj =new student(930,"neeraja",78)   //both 66 and 67 are same // it calls by using parent class
+        console.log(obj)
+        obj.display()
+        obj.result()        //neeraja is Pass
+
+        let obj2 =new student(931,"teja",28)
+        console.log(obj2)
+        obj2.display()
+        obj2.result()     //teja is Fail
+
+       console.log(obj2.nam)  //bye bye //28 //calls getter function
+        obj.mar=33;
+        console.log(obj.nam)   //33
+    </script>
+</body>
+</html>

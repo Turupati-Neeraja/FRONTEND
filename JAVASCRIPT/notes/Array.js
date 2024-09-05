@@ -1,4 +1,6 @@
 //--------------ARRAY--------------------//
+//-----------MAP----REDUCE-------FILTER----Every------FOREACH--------//
+
 //Arrays: Arrays are used to collect different Items It is a non- primitive data type.
 
 //Array METHODS//

@@ -1,0 +1,142 @@
+<!-- -------------------------EVENTS----BACKGROUND CHANGE------------------------
+
+--listners vs handlers, event propagation(capturing vs bubbling),delegation
+--CLOSURES, TASK, QUEUE, EVENT LOOP
+--template literals
+
+Events : The change in the state of an object is known as an event.
+- Events are fired to notify code of "interesting changes" that may affect code execution.
+- window events: eg:onload,onDOMContentloaded.on abort etc..,
+-MOUSE EVENTS (click, double click etc..)
+-KEYBOARD EVENTS (KEypress, keyup,keydown)
+-Form Events (submit etc..)
+-Print event & many more
+
+Each event is action done by user or system, it triggers a particular function for a purpose. one event may trigger multiple functions.Events are declared in two ways,
+//-------------Event handlers:
+        - you will declare the events in HTML and define its action in JS
+        - sometimes events may way and get trigger,for that we use event listners
+
+//----------Event Listners: 
+       - we will declare and define event in JS.
+       - you can select the element in js and addEventListner to it.
+       - we can use multiple event Listener
+       -NOTE : The callback reference should be same to remove.
+SYNTAX: listen.addEventListener('event',callback)
+        listen.removeEventListener('click',function(evt){}
+
+
+** How events are propograted?
+        - capturing(top down approach) and bubbling(bottom up approach)
+        - create the counter app using addEventListner
+
+//---------Event Delegation:
+        - it is design pattern which suggests calling parent element once instead of calling each element 
+
+//----------EVENT OBJECT : 
+        - It is a special object that has details about the event.
+        - All event handlers have access to the evnet Object's properties and methods.
+        - e.target, e.type, e.clientX, e.clientY
+SYNTAX: object.onmouseover = () =>{}
+*/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENTS</title>
+    <style>
+        div
+        {
+            background-color: aqua;
+            height :100px;
+            width: 100px;
+            text-align: center;
+            align-content: center;
+        }
+        .dark
+        {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="butt()">Click me..</button>
+    <button ondblclick="dubl()">Double click..</button>
+    <div id="object">
+        <p>div</p>
+    </div>
+    <button id="listen">event Object</button>
+    <button class="change" onclick="change()"> Color change</button>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum qui quos dicta.</p>
+
+    <script>
+        let count=0;
+        function butt()
+        {
+            console.log("hiii")
+            count++
+            console.log(count)
+        }
+
+        function dubl()
+        {
+            console.log("Double cicked!")
+        }
+        //----------- EVENT OBJECT
+        object.onmouseover = () =>{
+            console.log("You are inside div")
+        }
+
+        //----------EVENT LISTENERS
+        listen.addEventListener('click',function(evt){
+            console.log(evt)
+            console.log(evt.type)
+            console.log(evt.clientX, evt.clientY)
+            console.log(evt.target)
+        })
+
+        let hand3 = () =>{
+            console.log("HANDLER 3")
+        }
+        listen.addEventListener('click',hand3);
+        listen.removeEventListener('click',hand3);
+        
+        //----------------BACKGROUND CHANGE
+        /*let mode=document.querySelector(".change");
+        let shift='light';
+        mode.addEventListener ('click',() =>{
+            if(shift==='light'){
+                shift='dark';
+                document.body.style.backgroundColor='black'
+            }
+            else{
+                shift='light';
+                document.body.style.backgroundColor='white'
+            }
+            console.log(shift)
+        }) 
+       let shift = 'light';
+       ----------------------------------
+       function change()
+       {
+        if(shift==='light'){
+            shift = 'dark'
+            document.body.style.backgroundColor='black'
+        }
+        else{
+            shift='light';
+            document.body.style.backgroundColor='white'
+        }
+        console.log(shift)
+       }   */
+
+       function change()
+       {
+        document.body.classList.toggle('dark')
+       }
+    </script>
+</body>
+</html>

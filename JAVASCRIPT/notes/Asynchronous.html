@@ -1,0 +1,143 @@
+<!-- -------------------------------ASYNC--------------------------------
+-timers (setTimeout,setInterval)
+-Callback, Promises
+-async-await
+
+Asynchronous : if JavaScript has to wait for an operation to complete, it will execute the rest of the code while waiting. 
+- allows your code to run in the background without blocking the execution of other code.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous JavaScript</title>
+</head>
+<body>
+    <!-- This is a comment. It won't be displayed in the web page. -->
+
+    <div class="container">
+        <!-- .container creates a fixed-width container with centered content -->
+
+        <h1>Asynchronous JavaScript</h1>
+         
+        //setTimeout()
+        <h2>Example 1: setTimeout()</h2>
+        <script>
+            // setTimeout() is an asynchronous function
+
+            console.log("Before setTimeout()");
+
+            setTimeout(function () {
+                console.log("Inside setTimeout(): Delayed execution after 2000 milliseconds (2 seconds).");
+            }, 2000);
+
+            console.log("After setTimeout()");
+
+            setTimeout(greeting,3000) //setTimeout(greeting,3000, "hii")
+            function greeting()       //function greeting(x)
+            {
+                console.log("Another way" ) //console.log(x )
+            }
+        </script>
+
+        <h2>Example 2: setInterval</h2>
+        <script>
+            let counter=0;
+            const countInterval=setInterval(x,1000)
+            function x()
+            {
+                console.log(counter++);
+                if(counter>5)
+                clearInterval(countInterval)
+            }
+        </script> 
+
+        <h2>Example 3: Callback Functions : A function that is apsses as an argument to another function.</h2>
+        <script>
+            // Asynchronous function with a callback
+            function fetchData(callback) {
+                setTimeout(function () {
+                    console.log("Data fetched asynchronously.");
+                    callback();
+                }, 1500);
+            }
+
+            console.log("Before fetchData()");
+
+            fetchData(function () {
+                console.log("Inside fetchData() callback: Data processing completed.");
+            });
+
+            console.log("After fetchData()");
+        </script>
+
+        <h2>Example 4: Promises</h2>
+        <script>
+            // Asynchronous operation using Promises
+            function fetchDataWithPromise() {
+                return new Promise(function (resolve, reject) {
+                    setTimeout(function () {
+                        console.log("Data fetched using Promise.");
+                        resolve();
+                    }, 1000);
+                });
+            }
+
+            console.log("Before fetchDataWithPromise()");
+
+            fetchDataWithPromise()
+                .then(function () {
+                    console.log("Inside fetchDataWithPromise() then: Data processing completed.");
+                })
+                .catch(function (error) {
+                    console.error("An error occurred: " + error);
+                });
+
+            console.log("After fetchDataWithPromise()");
+        </script>
+
+        <h2>Example 5: Async/Await == ASYNC : makes  afunction return a promise
+                       AWAIT : makes a async function wait for a promise
+        </h2>
+        <p>- Allows you to write a asynchronous code in a synchronous manner .
+            - Async doesn't have resolve or reject parameters.
+            - Everything after await is placed in an event queue. </p>
+        <script>
+            function Dog()
+            {
+                return new Promise((resolve, reject) =>{
+                let dogwalk= true;
+                if(dogwalk)
+                    resolve("Dog walked inn...")
+                else
+                    reject("No Dog walked innn :( ")
+                }) 
+            }
+            function food()
+            {
+                console.log("dog eats food")
+            }
+
+            async function result()
+            {
+                try
+                {
+                    const Dogresult=await Dog();
+                    console.log(Dogresult)
+        
+                    const foodresult=await food();
+                    console.log(foodresult) 
+                }
+                catch(error)
+                {
+                    console.log("No Dog walked innn")
+                }
+            }
+
+            result()
+        </script>
+    </div>
+</body>
+</html>

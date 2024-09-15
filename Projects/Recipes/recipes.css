@@ -71,9 +71,8 @@ h1
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: center;
-    gap: 15px;
     width: 35%;
+    gap: 15px;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .divtwo
@@ -178,52 +177,96 @@ h3
 }
 .icon2:hover
 {
-    color:#489a9a;
+    color:#6F4E37;
 }
 .icon3:hover
 {
     color:#990012;
 }
-@media (min-width:200px) and (max-width:996px)
+@media (min-width:50px) and (max-width:996px)
 {
     body
     {
         background-size:500%;
     }
-    .info /* outer or single div */
+    h1 
     {
-        width: 45vw;
-        height: 35vh;
-        background-color:rgb(130, 154, 154);
-        border-radius: 0.8em;
-        padding-bottom: 1vh ;
+        font-size:22px;
     }
     #search
     {
         width: 15vh;
     }
+    /* option styling */
+    .diff
+    {
+        height: 3vh;
+    }
+    .center /* heading */
+    {
+        margin: 60px 0px 30px 0px;
+    }
+    #r1 /* whole data */
+    {
+        margin-top: 8vh;
+        margin: 3vw;
+    }
     .info /* outer or single div */
     {
-       display: grid;
-       grid-column: auto;
+        width: 45vw;
+        height: 29vh;
+        margin-bottom: 2vh;
+    }
+    .exdiv /* inside or inner div */
+    {
+        font-size: 12px;
+        gap: 7px;
+        justify-content: center;
+    }
+    .divtwo
+    {
+        padding:0.3vw ;
     }
     img
     {
-        height: 20vh;
+        height: 21vh;
         width: 27vw;
         border-radius: 50%;
     }
-    .info /* outer or single div */
+    /* button View Recipe styling */
+    .click
     {
-        height: 25vh;
+        width: 15vw;
+        font-size: 10px;
     }
     .modal 
     {
-        left: 10%;
-        width: 80vw;
+        left: 8%;
+        top: 5%;
+        width: 83vw;
+        box-sizing:border-box;
     }
-    #foot
+    h3
     {
-        height: 10vh;
+        padding:1vh;
+        text-decoration: underline;  
+    }
+    .modal ul 
+    {
+        padding-left:5vw ;
+    }
+    .modal ul li {
+        margin: 0px;
+    }
+    .container
+    {
+        height: 600%;
+    }
+}
+@media (min-width:998px)
+{
+    .exdiv /* inside or inner div */
+    {
+        text-align: center;
     }
 }

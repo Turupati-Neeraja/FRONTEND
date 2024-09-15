@@ -123,9 +123,17 @@ searchinput.addEventListener("input",function (event){
 const option=document.getElementById('opt')
 option.addEventListener("input",function (event){
     let text = event.target.value;
-    let options = recipeList.filter(function(select) {
-        return select.mealType.includes(text);
-    });
+    let options;
+    if(text==='All')
+    {
+        options=recipeList;
+    }
+    else
+    {
+        options = recipeList.filter(function(select) {
+            return select.mealType.includes(text);
+        }); 
+    }
     console.log(options)
     display(options);
     document.querySelector('#foot').style.display = 'none';
